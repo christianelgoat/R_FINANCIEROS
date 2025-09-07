@@ -60,9 +60,7 @@ const App: React.FC = () => {
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
           Desglose de Presupuesto del Proyecto
         </h1>
-        <p className="text-lg text-gray-600 mt-2">
-          Una visualización interactiva de la distribución de costos.
-        </p>
+        
       </header>
       
       <main className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-center gap-8 bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
@@ -81,7 +79,6 @@ const App: React.FC = () => {
       </main>
 
       <footer className="mt-8 text-gray-500 text-sm">
-        <p>Infografía generada con React y Recharts.</p>
       </footer>
     </div>
   );
