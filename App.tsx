@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo } from 'react';
 import type { BudgetItem } from './types';
 import { BudgetChart } from './components/BudgetChart';
@@ -7,14 +8,14 @@ import { DomainIcon, LogisticsIcon, ServicesIcon, ContingencyIcon } from './comp
 const budgetData: BudgetItem[] = [
   { 
     category: 'Dominio y Hosting', 
-    amount: 100.00, 
+    amount: 200.00, 
     description: 'Adquisición de un dominio web (.com, .pe) y/o costos asociados a un plan de hosting básico si las capas gratuitas no fueran suficientes.',
     icon: (props) => <DomainIcon {...props} />,
     color: '#38bdf8' // sky-400
   },
   { 
     category: 'Viáticos y Logística', 
-    amount: 150.00, 
+    amount: 50.00, 
     description: 'Gastos de transporte para las visitas y reuniones con las MYPES participantes durante la fase de pruebas piloto.',
     icon: (props) => <LogisticsIcon {...props} />,
     color: '#34d399' // emerald-400
@@ -60,7 +61,9 @@ const App: React.FC = () => {
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
           Desglose de Presupuesto del Proyecto
         </h1>
-        
+        <p className="text-lg text-gray-600 mt-2">
+          Una visualización interactiva de la distribución de costos.
+        </p>
       </header>
       
       <main className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-center gap-8 bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
@@ -79,6 +82,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="mt-8 text-gray-500 text-sm">
+        <p>Infografía generada con React y Recharts.</p>
       </footer>
     </div>
   );
